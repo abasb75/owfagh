@@ -59,24 +59,17 @@ export function calculateAbjad(text) {
     }
   }
 
-  if (unknownChars.length > 0) {
-    console.warn(`حروف ناشناخته: ${unknownChars.join(', ')} نادیده گرفته شدند.`);
-  }
-
   return result;
 }
 
-// تابع جداگانه برای محاسبه فقط ابجد کبیر
 export function calculateAbjadKabir(text) {
   return calculateAbjad(text).totalKabir;
 }
 
-// تابع جداگانه برای محاسبه فقط ابجد صغیر
 export function calculateAbjadSaghir(text) {
   return calculateAbjad(text).totalSaghir;
 }
 
-// تابع جداگانه برای محاسبه فقط ابجد وسطی
 export function calculateAbjadWusta(text) {
   return calculateAbjad(text).totalWusta;
 }
